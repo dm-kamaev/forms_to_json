@@ -1,9 +1,28 @@
 {
   "name": "form_to_json",
   "version": "0.0.1",
-  "description": "Module for converting html form to json object. Module has supports convert files as base64",
+  "description": "A module for serializing an html form into a JSON object. There is support for file conversion (as base64)",
   "main": "index.js",
-  "keywords": [],
+  "keywords": [
+    "form-serialization",
+    "form-to-json",
+    "html-to-json",
+    "json-form",
+    "form to json",
+    "formData to json",
+    "form fields to json",
+    "serializing form to json",
+    "serializing FormData to json",
+    "serializing form fields to json",
+    "formdata",
+    "formdata-to-json",
+    "form",
+    "json",
+    "base64",
+    "file to base64",
+    "convert",
+    "converter"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
