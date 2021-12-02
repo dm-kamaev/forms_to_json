@@ -1,58 +1,11 @@
 A lightweight module (without Jquery) for serializing html forms into a JSON object.
 In addition, it supports serialization of input fields with files in base64.
 
-## Example with Html from
+## Serialize Form
 
 [Example serialize HTML form](https://codepen.io/dm-kamaev/pen/MWEwJRg?editors=1011).
 
-<details>
-<summary>Html Form</summary>
-<form action="#">
-  <div>
-    <label>Author:</label>
-    <input type="text" name=author>
-  </div>
-  <div>
-    <label for="">Year:</label>
-    <input type="number" name=year>
-  </div>
 
-  <div>
-    <label class="checkbox">
-      <input type="checkbox" name=isGoldCollection value=yes class=checkbox>
-      Gold collection
-    </label>
-  </div>
-
-
-  <div>
-    <label class="radio">
-      <input type="radio" value="v1" name="type">
-      Variant 1
-    </label>
-  </div>
-
-
-  <div>
-    <label class="radio">
-      <input type="radio" value="v2" name="type">
-      Variant 2
-    </label>
-  </div>
-
-  <div style=margin-top:16px>
-    <select name="hero" class=select multiple>
-      <option>Select hero</option>
-      <option value="spider-man">Spider-Man</option>
-      <option value="batman">Batman</option>
-      <option value="superman">Superman</option>
-      <option value="ironman">IronMan</option>
-    </select>
-  </div>
-
-  <button type="submit">Create</button>
-</form>
-</details>
 ```js
 import FormToJSON from 'form_to_json';
 
@@ -74,6 +27,11 @@ console.log(json);
 */
 ```
 
+## Serialize Form with Files
+
+Files converting to base64.
+
+[Example serialize HTML form with files](https://codepen.io/dm-kamaev/pen/qBPdraX?editors=1111).
 
 ```js
 import FormToJSON from 'form_to_json';
@@ -82,6 +40,15 @@ const $form = document.querySelector('form');
 
 new FormToJSON($form).parseWithFiles().then((json) => {
   console.log(json);
+  /*
+  {
+    "author": "War and Peace",
+    "files": [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABEwAAAJkCAYAAAALLrTbAA...."
+      "data:image/png;base64,QLbZMHkY7t0kaPHi3z5s2T0qVLO2wr07p1a8mUKZO21mNf...."
+    ]
+  }
+  */
 }).catch(err => {
   console.log(err);
 });
