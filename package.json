@@ -1,0 +1,19 @@
+{
+  "name": "form_to_json",
+  "version": "0.0.1",
+  "description": "Module for converting html form to json object. Module has supports convert files as base64",
+  "main": "index.js",
+  "keywords": [],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dm-kamaev@rambler.ru",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dm-kamaev/form_to_json.git"
+  },
+  "dependencies": {
+    "promise_mtd": "2.2.2"
+  }
+}
