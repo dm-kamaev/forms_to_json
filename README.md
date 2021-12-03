@@ -1,5 +1,10 @@
+# Form to json
 A lightweight module (without Jquery) for serializing html forms into a JSON object.
 In addition, it supports serialization of input fields with files in base64.
+
+```sh
+npm i forms_to_json -S
+```
 
 ## Serialize Form
 
@@ -7,7 +12,7 @@ In addition, it supports serialization of input fields with files in base64.
 
 
 ```js
-import FormToJSON from 'form_to_json';
+import FormToJSON from 'forms_to_json';
 
 const $form = document.querySelector('form');
 
@@ -34,7 +39,7 @@ Files converting to base64.
 [Example serialize HTML form with files](https://codepen.io/dm-kamaev/pen/qBPdraX?editors=1111).
 
 ```js
-import FormToJSON from 'form_to_json';
+import FormToJSON from 'forms_to_json';
 
 const $form = document.querySelector('form');
 
