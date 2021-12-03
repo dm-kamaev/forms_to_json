@@ -1,6 +1,6 @@
 {
   "name": "forms_to_json",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A module for serializing an html form into a JSON object. There is support for file conversion (as base64)",
   "main": "index.js",
   "keywords": [
