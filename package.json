@@ -1,8 +1,8 @@
 {
   "name": "forms_to_json",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A module for serializing an html form into a JSON object. There is support for file conversion (as base64)",
-  "main": "index.js",
+  "main": "dist/index.js",
   "keywords": [
     "form-serialization",
     "form-to-json",
@@ -24,6 +24,7 @@
     "converter"
   ],
   "scripts": {
+    "prepublish": "make build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dm-kamaev@rambler.ru",
@@ -34,5 +35,9 @@
   },
   "dependencies": {
     "promise_mtd": "2.2.2"
+  },
+  "devDependencies": {
+    "webpack": "5.65.0",
+    "webpack-cli": "4.9.1"
   }
 }
