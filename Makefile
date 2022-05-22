@@ -3,3 +3,6 @@ build:
 
 watch:
 	npx webpack
+
+publish:
+	npm publish
