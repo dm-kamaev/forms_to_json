@@ -14,7 +14,6 @@ export default class FormToJSON {
 
   parse() {
     const res = {};
-    const $elements = this.$elements;
     this.elements.forEach(element => {
       // Make sure the element has the required properties and should be added.
       if (this.isValidElement(element) && this.isValidValue(element) && !this.isFile(element)) {
@@ -25,7 +24,7 @@ export default class FormToJSON {
         */
         if (this.isCheckbox(element)) {
           const name = element.name;
-          const hasMany = $elements[name].length > 1;
+          const hasMany = this._has_many_checkbox_for(name);
           if (!res[name] && hasMany) {
             res[name] = [];
           }
@@ -93,6 +92,17 @@ export default class FormToJSON {
         return hash;
       },
     };
+  }
+
+  _has_many_checkbox_for(name) {
+    let hasMany = 0;
+    for (let i = 0, l = this.elements.length; i < l; i++) {
+      if (el.type === 'checkbox' && el.name === name) {
+        hasMany++;
+        break;
+      }
+    }
+    return hasMany > 1;
   }
 
   /**
