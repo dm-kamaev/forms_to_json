@@ -97,6 +97,7 @@ export default class FormToJSON {
   _has_many_checkbox_for(name) {
     let hasMany = 0;
     for (let i = 0, l = this.elements.length; i < l; i++) {
+      const el = this.elements[i];
       if (el.type === 'checkbox' && el.name === name) {
         hasMany++;
         break;
