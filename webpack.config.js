@@ -22,7 +22,7 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'index.js', // <--- Will be compiled to this single file,
     libraryExport: 'default',
-    libraryTarget: 'umd',
+    libraryTarget: 'commonjs2',
   },
   resolve: {
     extensions: ['.js'],
