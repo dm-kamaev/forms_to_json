@@ -20,7 +20,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'index.js' // <--- Will be compiled to this single file
+    filename: 'index.js', // <--- Will be compiled to this single file,
+    libraryExport: 'default',
   },
   resolve: {
     extensions: ['.js'],

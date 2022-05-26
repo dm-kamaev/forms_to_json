@@ -1,6 +1,6 @@
 {
   "name": "forms_to_json",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A module for serializing an html form into a JSON object. There is support for file conversion (as base64)",
   "main": "dist/index.js",
   "keywords": [
@@ -24,7 +24,7 @@
     "converter"
   ],
   "scripts": {
-    "prepublish": "make build",
+    "prepublishOnly": "make build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "dm-kamaev@rambler.ru",
