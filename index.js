@@ -100,7 +100,9 @@ export default class FormToJSON {
       const el = this.elements[i];
       if (el.type === 'checkbox' && el.name === name) {
         hasMany++;
-        break;
+        if (hasMany > 1) {
+          break;
+        }
       }
     }
     return hasMany > 1;
